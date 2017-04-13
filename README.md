@@ -1,4 +1,4 @@
-Installation:
+# Installation:
 ```
     git clone git://github.com/alirezaamiri/dotvim.git ~/.vim
 ```
@@ -13,6 +13,9 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule init
     git submodule update
 ```
+
+# Minatenance:
+
 To upgrade:
 ```
     git submodule foreach git pull origin master
