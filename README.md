@@ -4,8 +4,7 @@
 ```
 Create symlinks:
 ```
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 Switch to the `~/.vim` directory, and fetch submodules:
 ```
