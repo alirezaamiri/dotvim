@@ -6,3 +6,4 @@ color dracula
 
 
 autocmd! bufwritepost .vimrc source %
+
