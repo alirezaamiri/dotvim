@@ -1,6 +1,9 @@
-syntax enabled
-set background=light
-color solarized
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+syntax enable
+set background=dark
+colorscheme solarized
 
 augroup reload_vimrc " {
     autocmd!
