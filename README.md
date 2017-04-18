@@ -9,7 +9,7 @@ Create symlinks:
 
 Then install vundle :
 ```
-	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 Then open vim and write :BundleInstall
