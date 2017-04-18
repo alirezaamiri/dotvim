@@ -1,42 +1,56 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+" Vundle
+	"Defaults setup
+	set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+    Plugin 'gmarik/vundle'
+    " My Plugins
+    Plugin 'tpope/vim-rails.git'
+    Plugin 'tpope/vim-surround'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'Lokaltog/vim-powerline'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'Shougo/neocomplcache'
+    Plugin 'Shougo/neosnippet'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'honza/vim-snippets'
+    Plugin 'Lokaltog/vim-easymotion'
+    Plugin 'dracula/vim'
+    " docker highlight
+    Plugin 'ekalinin/Dockerfile.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+    call vundle#end()
 
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"docker scheme"
-Plugin 'dracula/vim'
-
-" docker highlight
-Plugin 'ekalinin/Dockerfile.vim'
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
-syntax enable
-filetype plugin indent on
-color dracula
+" Basics
+set nocompatible		" be iMproved
+filetype off			" required!
+filetype plugin indent on	" required!
+let mapleader = ","		" Change map leader
+set number			" Show Number
+syntax on			" Turn on Syntax
+set laststatus=2   		" Always show the statusline
+set encoding=utf-8 		" Necessary to show Unicode glyphs
+set smartindent			" Do smart indent
+set tabstop=4			" Tab is 4 spaces
+set shiftwidth=4		" Indentation is 4 spaces
+set expandtab			" Tab characters are converted to spaces
+color dracula	" Use Dracula
+set background=dark     	" Use dark bg for Solarized
+set foldlevel=4 		" High fold level so zc will close lower lvl 1st
+set number			" Print the number of each line
+set wildmenu			" Commandline completion is enhance mode
+set guifont=Monaco:h12  	" Use Monaco 12
+" Miscs
+	" Arrow Keys do nothing
+    "nnoremap <up> <nop>
+	"nnoremap <down> <nop>
+	"nnoremap <left> <nop>
+	"nnoremap <right> <nop>
+	"inoremap <up> <nop>
+	"inoremap <down> <nop>
+	"inoremap <left> <nop>
+	"inoremap <right> <nop>
+	"Remap CtrlP plugin
 
 autocmd! bufwritepost ~/.vim/.vimrc source %
 
