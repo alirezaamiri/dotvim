@@ -22,7 +22,11 @@ Plugin 'git://git.wincent.com/command-t.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"docker scheme"
+Plugin 'dracula/vim'
 
+" docker highlight
+Plugin 'ekalinin/Dockerfile.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -32,7 +36,7 @@ call vundle#end()            " required
 
 syntax enable
 filetype plugin indent on
-"color dracula
+color dracula
 
 autocmd! bufwritepost ~/.vim/.vimrc source %
 
