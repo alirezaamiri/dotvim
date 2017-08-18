@@ -15,7 +15,6 @@ call vundle#begin()
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'honza/vim-snippets'
     Plugin 'Lokaltog/vim-easymotion'
-    Plugin 'dracula/vim'
     " docker highlight
     Plugin 'ekalinin/Dockerfile.vim'
 
@@ -34,7 +33,8 @@ set smartindent			" Do smart indent
 set tabstop=4			" Tab is 4 spaces
 set shiftwidth=4		" Indentation is 4 spaces
 set expandtab			" Tab characters are converted to spaces
-color dracula	" Use Dracula
+let g:solarized_termcolors=256
+colorscheme solarized	" Use Draculaa
 set background=dark     	" Use dark bg for Solarized
 set foldlevel=4 		" High fold level so zc will close lower lvl 1st
 set number			" Print the number of each line
